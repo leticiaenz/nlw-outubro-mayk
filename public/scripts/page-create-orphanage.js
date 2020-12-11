@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
 
 //create icon
 const icon = L.icon({
-  iconUrl: "./public/images/map-marker.svg",
+  iconUrl: "/images/map-marker.svg",
   iconSize: [58, 68],
   iconAnchor: [29,68],
 })
@@ -87,4 +87,16 @@ function toggleSelect(event) {
   const input = document.querySelector('[name="open_on_weekends"]')
   input.value = button.dataset.value
 
+}
+
+function validate(event) {
+  //validar se lat e lng estao preenchidos
+  const needsLatAndLng = true;
+  if(needsLatAndLng) {
+    event.preventDefault()
+    alert('Selecione um ponto no mapa')
+  }
+
+  //salvar um orphanage
+  
 }
